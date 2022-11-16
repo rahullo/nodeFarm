@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900" rel="stylesheet" />
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/155/ear-of-maize_1f33d.png" />
+    <title>{%PRODUCTNAME%} {%IMAGE%} /// NODE FARM</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+        
+        html {
+            font-size: 62.5%;
+            box-sizing: border-box;
+        }
+        
+        body {
+            padding: 5rem 5rem 10rem;
+            line-height: 1.7;
+            font-family: 'Nunito Sans', sans-serif;
+            color: #555;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #9be15d, #00e3ae);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .checkout {
+            position: relative;
+            width: 50%;
+            height: 50rem;
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            border-radius: 2rem;
+            padding: 1rem;
+            box-sizing: border-box;
+            box-shadow: 0 3rem 6rem 1rem rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
+        .totals {
+            position: relative;
+            width: 100%;
+            height: 20%;
+            color: black;
+            padding: 1rem;
+        }
+        
+        h3,
+        h4 {
+            font-size: 1.4rem;
+        }
+        
+        .purchase {
+            position: relative;
+            width: 100%;
+            height: 40%;
+            display: grid;
+            align-items: center;
+        }
+        
+        input {
+            width: 100%;
+            height: 5rem;
+            border-radius: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: .5rem;
+        }
+        
+        .confirm-purchase {
+            position: relative;
+            width: 100%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        button {
+            width: 10rem;
+            height: 3rem;
+            border: none;
+            border-radius: 1.5rem;
+            font-weight: bolder;
+        }
+        
+        button:hover {
+            transform: scale(1.2);
+            transition: .5s;
+        }
+        
+        button:not(:hover) {
+            transform: scale(1);
+            transition: .5s;
+        }
+        
+        span {
+            margin-left: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="checkout">
+        <h2>CheckOut</h2>
+        <div class="totals">
+            <h4>You Choose <span> {%QUANTITY%} {%PRODUCTNAME%}</span></h4>
+            <h3>Total <span>{%PRICE%}€</span></h3>
+        </div>
+        <div class="purchase">
+            <input type="" name="Card Number" id="1" placeholder="Card Number">
+            <input type="date" name="Expiry date" id="2" placeholder="Expiry date">
+            <input type="" name="cvv" id="3" placeholder="CVV">
+        </div>
+        <div class="confirm-purchase">
+            <button type="submit">PAY {%PRICE%}€</button>
+        </div>
+    </div>
+</body>
+
+</html>
